@@ -1,17 +1,17 @@
 <?php
 /*
-Plugin Name: rmbt-premium-theme-1 core
+Plugin Name: red-explorers core
 Plugin URI: #
 Description:  
 Version: 1.0
 Author: Rombt
 Author URI: #
 License: Proprietary
-Text Domain: rmbt-premium-theme-1 //! you must use only chars those allow for url 
+Text Domain: red-explorers //! you must use only chars those allow for url 
 */
 
 
-define( 'RMBT_TEXT_DOMAIN_THEME', 'premium-theme-1' );  //! you must use only chars those allow for url 
+define( 'RMBT_TEXT_DOMAIN_THEME', 'red-explorers' );  //! you must use only chars those allow for url 
 
 if ( ! function_exists( 'add_action' ) ) {
 	echo 'Hi there!  I\'m just a plugin, not much I can do when called directly.';
@@ -57,7 +57,7 @@ function rmbt_get_images_sizes() {
 				'height' => 250,
 				'crop' => true,
 			),
-		)
+		),
 	);
 }
 add_action( 'plugin_loaded', 'rmbt_register_image_size' );

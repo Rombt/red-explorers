@@ -1,6 +1,6 @@
 <?php
 
-define( 'RMBT_TEXT_DOMAIN_THEME', 'rmbt-premium-theme-1' );		//! you must use only chars those allow for url 
+define( 'RMBT_TEXT_DOMAIN_THEME', 'red-explorers' );		//! you must use only chars those allow for url 
 define( 'rmbt_PATH_THEME', get_template_directory() );
 define( 'rmbt_URL_THEME', esc_url( get_template_directory_uri() ) );
 
