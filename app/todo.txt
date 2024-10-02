@@ -68,7 +68,10 @@ https://www.figma.com/design/xc8iLAzlViHpAX0yquH2eU/Traveling-Blog-Website-(Comm
 
 добавить transition на закрытие бургер меню
 дизайн выпадающих пунктов меню хедера 
+scrollDownIcon почему нет плавности?!
+
+
+
 
 вопросы:
-
 иконки через svg sprite это нормально?

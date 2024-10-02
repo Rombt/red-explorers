@@ -1,19 +1,20 @@
 .rmbt-button {
   display: block;
-  width: 218px;
-  height: 85px;
-  line-height: 85px;
+
   text-align: center;
-  //   border: 1px solid #0515fd;
   background-color: #0336ff;
   color: #fff;
   border-radius: 8px;
 
-  font-size: 24px;
   font-family: lato;
   font-weight: 600;
   text-transform: capitalize;
   text-decoration: none;
+
+  .adaptive-prop(font-size, 24, 16);
+  .adaptive-prop(width, 218, 158);
+  .adaptive-prop(height, 85, 45);
+  .adaptive-prop(line-height, 85, 45);
 }
 .echo {
 }

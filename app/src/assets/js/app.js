@@ -7,11 +7,22 @@ import './modules/arrowsInputNumberStyle.js';
 import './modules/HorizontalMenu.js';
 // import './modules/sliders.js';
 
+const scrollDownIcon = document.querySelector('.scroll-down__icon');
 
-// let tl = gsap.timeline();
+if (scrollDownIcon) {
+  const scrollHeight = Math.max(
+    document.body.scrollHeight,
+    document.documentElement.scrollHeight,
+    document.body.offsetHeight,
+    document.documentElement.offsetHeight,
+    document.body.clientHeight,
+    document.documentElement.clientHeight
+  );
 
-
-// tl.to('.test-box__green', { duration: 2, x: 800, ease: 'elastic' });
-// tl.to('.test-box__green', { duration: 2, y: 200, ease: 'elastic' });
-// tl.to('.test-box__green', { duration: 2, x: 0, ease: 'elastic' });
-// tl.to('.test-box__green', { duration: 2, y: 0, ease: 'elastic' });
+  document.querySelector('.scroll-down__icon').addEventListener('click', e => {
+    window.scrollBy({
+      top: scrollHeight,
+      behavior: 'smooth',
+    });
+  });
+}
