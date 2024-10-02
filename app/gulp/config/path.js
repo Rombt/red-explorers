@@ -22,7 +22,7 @@ export const path = {
   ThemeName: THEME_NAME,
   srcPluginName: 'core-plugin', // set name your plugin for development version
   RootPath: ROOT_PATH,
-  proxy: [`http://red-explorers.multisite/`, `http://red-explorers.multisite/`],
+  proxy: [`http://localhost/red-explorers`, `http://localhost/red-explorers`],
 
   get src() {
     return {
