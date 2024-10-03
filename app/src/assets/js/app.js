@@ -8,7 +8,6 @@ import './modules/HorizontalMenu.js';
 // import './modules/sliders.js';
 
 const scrollDownIcon = document.querySelector('.scroll-down__icon');
-
 if (scrollDownIcon) {
   const scrollHeight = Math.max(
     document.body.scrollHeight,

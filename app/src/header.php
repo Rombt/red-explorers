@@ -27,6 +27,11 @@
          </div>
          <header class="rmbt-container rmbt-header-red-explorers">
 
+            <?php get_template_part( 'template-parts\components\button-generate_content\button-generate_content', null, [ 
+               'href' => '#',
+               'class' => '',
+               'text' => 'regenerate content',
+            ] ); ?>
 
             <div class="rmbt-header-red-explorers__row rmbt-header-red-explorers-top-row">
 
@@ -61,8 +66,8 @@
                      <?php echo rmbt_get_redux_field( 'rmbt-header_title', 1 ) ?>
                   </div>
                   <?php get_template_part( 'template-parts\components\button\button', null, [ 
-							'href' => '#',
-							'class' => rmbt_get_redux_field( 'rmbt-header_button_href', 1 ),
+							'href' => rmbt_get_redux_field( 'rmbt-header_button_href', 1 ),
+							'class' => '',
 							'text' => rmbt_get_redux_field( 'rmbt-header_button_title', 1 ),
 						] ); ?>
                   <div class="rmbt-header-red-explorers-col__scroll-down scroll-down">

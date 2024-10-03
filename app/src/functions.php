@@ -31,13 +31,12 @@ function rmbt_theme_scripts() {
 	wp_enqueue_script( RMBT_TEXT_DOMAIN_THEME . '-app', get_template_directory_uri() . '/assets/js/app.main.min.js', array( 'jquery' ), '1.0', true );
 
 
-	wp_add_inline_script(
-		'rmbt_theme-app',
-		'const rmbt_theme_App = ' . json_encode( [
-			// 'ajaxUrl' => admin_url('ajax.php'),		// ????
-			// 'rmbtArrCategories' => $categories,		// your data if you need it
-		] ),
-		'before'
+	wp_localize_script(
+		'red-explorers-app',
+		'redExplorersAppData',
+		[ 
+			'ajaxUrl' => admin_url( 'admin-ajax.php' ),
+		]
 	);
 }
 add_action( 'wp_enqueue_scripts', 'rmbt_theme_scripts', 20 );
