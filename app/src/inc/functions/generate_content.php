@@ -86,14 +86,6 @@ function rmbt_generate_content() {
 
 
 
-
-
-
-
-
-
-
-
 	// wp_send_json_success( $request );
 	wp_die();
 }
