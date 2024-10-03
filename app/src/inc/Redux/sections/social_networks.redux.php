@@ -15,8 +15,7 @@ Redux::set_section(
 				'id' => 'rmbt-social-networks_fb-section-start',
 				'type' => 'section',
 				'title' => esc_html__( 'Facebook section', RMBT_TEXT_DOMAIN_THEME ),
-				// 'subtitle' => esc_html__('Enter phone number and set his name', RMBT_TEXT_DOMAIN_THEME),
-				'indent' => true
+				'indent' => true,
 			),
 			array(
 				'id' => 'rmbt-social-networks_fb-link',
@@ -31,9 +30,6 @@ Redux::set_section(
 				'title' => esc_html__( 'Facebook icon', RMBT_TEXT_DOMAIN_THEME ),
 				'compiler' => 'true',
 				'preview_size' => 'full',
-				// 'default' => array(
-				// 	'url' => '/assets/img/icons/sprite.svg#facebook_1'
-				// ),
 			),
 
 			array(
@@ -51,11 +47,45 @@ Redux::set_section(
 			),
 
 			array(
+				'id' => 'rmbt-social-networks_tw-section-start',
+				'type' => 'section',
+				'title' => esc_html__( 'Twitter section', RMBT_TEXT_DOMAIN_THEME ),
+				'indent' => true,
+			),
+			array(
+				'id' => 'rmbt-social-networks_tw-link',
+				'type' => 'text',
+				'title' => esc_html__( 'Twitter link', RMBT_TEXT_DOMAIN_THEME ),
+				'default' => esc_url( 'https://www.facebook.com/' ),
+			),
+			array(
+				'id' => 'rmbt-social-networks_tw_img-id',
+				'type' => 'media',
+				'url' => true,
+				'title' => esc_html__( 'Twitter icon', RMBT_TEXT_DOMAIN_THEME ),
+				'compiler' => 'true',
+				'preview_size' => 'full',
+			),
+
+			array(
+				'id' => 'rmbt-social-networks-tw_img-alt',
+				'type' => 'text',
+				'title' => esc_html__( 'Image description for Twitter icon', RMBT_TEXT_DOMAIN_THEME ),
+				'default' => esc_html__( '', RMBT_TEXT_DOMAIN_THEME ),
+			),
+
+
+			array(
+				'id' => 'rmbt-social-networks_tw-section-end',
+				'type' => 'section',
+				'indent' => false,
+			),
+
+			array(
 				'id' => 'rmbt-social-networks_instagram-section-start',
 				'type' => 'section',
 				'title' => esc_html__( 'Instagram section', RMBT_TEXT_DOMAIN_THEME ),
-				// 'subtitle' => esc_html__('Enter phone number and set his name', RMBT_TEXT_DOMAIN_THEME),
-				'indent' => true
+				'indent' => true,
 			),
 
 
@@ -63,7 +93,7 @@ Redux::set_section(
 				'id' => 'rmbt-social-networks_instagram-link',
 				'type' => 'text',
 				'title' => esc_html__( 'Instagram link', RMBT_TEXT_DOMAIN_THEME ),
-				'default' => 'https://www.instagram.com/',
+				'default' => 'https://www.twitter.com/',
 			),
 			array(
 				'id' => 'rmbt-social-networks_instagram_img-id',
@@ -72,9 +102,6 @@ Redux::set_section(
 				'title' => esc_html__( 'Instagram icon', RMBT_TEXT_DOMAIN_THEME ),
 				'compiler' => 'true',
 				'preview_size' => 'full',
-				// 'default' => array(
-				// 	'url' => '/assets/img/icon_instagram.png'
-				// ),
 			),
 
 			array(
@@ -94,8 +121,7 @@ Redux::set_section(
 				'id' => 'rmbt-social-networks_youtube-section-start',
 				'type' => 'section',
 				'title' => esc_html__( 'Youtube section', RMBT_TEXT_DOMAIN_THEME ),
-				// 'subtitle' => esc_html__('Enter phone number and set his name', RMBT_TEXT_DOMAIN_THEME),
-				'indent' => true
+				'indent' => true,
 			),
 
 			array(
@@ -111,9 +137,6 @@ Redux::set_section(
 				'title' => esc_html__( 'Youtube icon', RMBT_TEXT_DOMAIN_THEME ),
 				'compiler' => 'true',
 				'preview_size' => 'full',
-				// 'default' => array(
-				// 	'url' => '/assets/img/icon_youtube.png'
-				// ),
 			),
 			array(
 				'id' => 'rmbt-social-networks-youtube_img-alt',
@@ -124,6 +147,41 @@ Redux::set_section(
 
 			array(
 				'id' => 'rmbt-social-networks_youtube-section-end',
+				'type' => 'section',
+				'indent' => false,
+			),
+
+
+			array(
+				'id' => 'rmbt-social-networks_linkedin-section-start',
+				'type' => 'section',
+				'title' => esc_html__( 'Linkedin section', RMBT_TEXT_DOMAIN_THEME ),
+				'indent' => true,
+			),
+
+			array(
+				'id' => 'rmbt-social-networks_linkedin-link',
+				'type' => 'text',
+				'title' => esc_html__( 'Linkedin link', RMBT_TEXT_DOMAIN_THEME ),
+				'default' => esc_url( 'https://linkedin.com/' ),
+			),
+			array(
+				'id' => 'rmbt-social-networks-linkedin_img-id',
+				'type' => 'media',
+				'url' => true,
+				'title' => esc_html__( 'Linkedin icon', RMBT_TEXT_DOMAIN_THEME ),
+				'compiler' => 'true',
+				'preview_size' => 'full',
+			),
+			array(
+				'id' => 'rmbt-social-networks-linkedin_img-alt',
+				'type' => 'text',
+				'title' => esc_html__( 'Image description for linkedin icon', RMBT_TEXT_DOMAIN_THEME ),
+				'default' => esc_html__( '', RMBT_TEXT_DOMAIN_THEME ),
+			),
+
+			array(
+				'id' => 'rmbt-social-networks_linkedin-section-end',
 				'type' => 'section',
 				'indent' => false,
 			),

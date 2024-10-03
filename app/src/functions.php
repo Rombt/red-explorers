@@ -64,6 +64,7 @@ function rmbt_site_setup() {
 	register_nav_menus(
 		array(
 			'header_nav' => esc_html__( 'rmbt_Header Navigation', RMBT_TEXT_DOMAIN_THEME ),
+			'footer_horizontal_nav' => esc_html__( 'rmbt_Footer Horizontal Navigation', RMBT_TEXT_DOMAIN_THEME ),
 			'footer_nav' => esc_html__( 'rmbt_Footer Navigation', RMBT_TEXT_DOMAIN_THEME ),
 		)
 	);
@@ -146,17 +147,17 @@ function rmbt_widgets_init() {
 			'after_title' => '</h2>',
 		)
 	);
-	register_sidebar(
-		array(
-			'name' => esc_html__( 'Sidebar For Shop page', RMBT_TEXT_DOMAIN_THEME ),
-			'id' => 'rmbt_shop_sidebar',
-			'description' => esc_html__( 'Add widgets here', RMBT_TEXT_DOMAIN_THEME ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget' => '</section>',
-			'before_title' => '<h2 class="widget-title">',
-			'after_title' => '</h2>',
-		)
-	);
+	// register_sidebar(
+	// 	array(
+	// 		'name' => esc_html__( 'Sidebar For Shop page', RMBT_TEXT_DOMAIN_THEME ),
+	// 		'id' => 'rmbt_shop_sidebar',
+	// 		'description' => esc_html__( 'Add widgets here', RMBT_TEXT_DOMAIN_THEME ),
+	// 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+	// 		'after_widget' => '</section>',
+	// 		'before_title' => '<h2 class="widget-title">',
+	// 		'after_title' => '</h2>',
+	// 	)
+	// );
 }
 add_action( 'widgets_init', 'rmbt_widgets_init' );
 

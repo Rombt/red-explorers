@@ -43,6 +43,12 @@ Redux::set_section(
 				'title' => esc_html__( 'Text of the button', RMBT_TEXT_DOMAIN_THEME ),
 			),
 			array(
+				'id' => 'rmbt-header_button_href',
+				'type' => 'text',
+				'title' => esc_html__( 'Link For The Button', RMBT_TEXT_DOMAIN_THEME ),
+				'default' => '#',
+			),
+			array(
 				'id' => 'rmbt-header_scroll-down',
 				'type' => 'text',
 				'title' => esc_html__( 'Scroll Down', RMBT_TEXT_DOMAIN_THEME ),
