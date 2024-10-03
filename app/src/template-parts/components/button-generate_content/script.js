@@ -9,6 +9,7 @@ jQuery(document).ready(function ($) {
       type: 'POST',
       data: {
         action: 'generate_content',
+        request: 'regenerate-content',
       },
       success: function (response) {
         console.log(response);
