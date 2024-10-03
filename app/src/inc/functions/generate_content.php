@@ -29,24 +29,24 @@ function rmbt_generate_content() {
 	}
 
 	$countries = [ 
-		"Франция" => "https://example.com/images/france.jpg",
-		"Италия" => "https://example.com/images/italy.jpg",
-		"Испания" => "https://example.com/images/spain.jpg",
-		"Япония" => "https://example.com/images/japan.jpg",
-		"Канада" => "https://example.com/images/canada.jpg",
-		"Бразилия" => "https://example.com/images/brazil.jpg",
-		"Австралия" => "https://example.com/images/australia.jpg",
-		"Германия" => "https://example.com/images/germany.jpg",
-		"Индия" => "https://example.com/images/india.jpg",
-		"Южная Африка" => "https://example.com/images/southafrica.jpg",
-		"Мексика" => "https://example.com/images/mexico.jpg",
-		"Аргентина" => "https://example.com/images/argentina.jpg",
-		"Китай" => "https://example.com/images/china.jpg",
-		"Великобритания" => "https://example.com/images/uk.jpg",
-		"Таиланд" => "https://example.com/images/thailand.jpg",
-		"Россия" => "https://example.com/images/russia.jpg",
-		"Новая Зеландия" => "https://example.com/images/newzealand.jpg",
-		"Швейцария" => "https://example.com/images/switzerland.jpg",
+		"Франция",
+		"Италия",
+		"Испания",
+		"Япония",
+		"Канада",
+		"Бразилия",
+		"Австралия",
+		"Германия",
+		"Индия",
+		"Южная Африка",
+		"Мексика",
+		"Аргентина",
+		"Китай",
+		"Великобритания",
+		"Таиланд",
+		"Уругвай",
+		"Новая Зеландия",
+		"Швейцария",
 	];
 
 	function getRandomImage( $country ) {
@@ -71,7 +71,6 @@ function rmbt_generate_content() {
 			'post_date' => $date,
 			'meta_input' => [ 
 				'country' => $country,
-				'image_url' => $image,
 			],
 		];
 
