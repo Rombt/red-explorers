@@ -6,11 +6,19 @@ add_action( 'wp_ajax_nopriv_generate_content', 'rmbt_generate_content' );
 function rmbt_generate_content() {
 	$request = $_POST['request'];
 
-	// log_in_file( $request );
-
 	if ( $request !== 'regenerate-content' ) {
 		return;
 	}
+
+	$image_path = wp_upload_dir()['basedir'] . '/2024/10/coming-soon_0.png';
+	$attachment = array(
+		'guid' => wp_upload_dir()['url'] . '/' . basename( $image_path ),
+		'post_mime_type' => mime_content_type( $image_path ),
+		'post_title' => preg_replace( '/\.[^.]+$/', '', basename( $image_path ) ),
+		'post_content' => '',
+		'post_status' => 'inherit',
+	);
+	$attachment_id = wp_insert_attachment( $attachment, $image_path, 0 );
 
 	function generateRandomDate( $startDate, $endDate ) {
 		$timestampStart = strtotime( $startDate );
@@ -55,7 +63,9 @@ function rmbt_generate_content() {
 	}
 
 	for ( $i = 0; $i < 10; $i++ ) {
-		$country = array_rand( $countries );
+
+		$random_index = mt_rand( 0, count( $countries ) - 1 );
+		$country = $countries[ $random_index ];
 
 		$date = generateRandomDate( "2022-01-01", "2024-12-31" );
 		$title = "Путешествие по " . $country;
@@ -77,15 +87,15 @@ function rmbt_generate_content() {
 		$post_id = wp_insert_post( $post_data );
 
 		if ( $post_id ) {
+			if ( $attachment_id ) {
+				set_post_thumbnail( $post_id, $attachment_id );
+			}
+
 			echo "Пост '{$title}' добавлен с ID {$post_id}\n";
 		} else {
 			echo "Ошибка добавления поста '{$title}'\n";
 		}
 	}
 
-
-
-
-	// wp_send_json_success( $request );
 	wp_die();
 }

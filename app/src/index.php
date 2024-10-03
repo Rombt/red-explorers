@@ -16,23 +16,15 @@
 					while ( have_posts() ) :
 						the_post();
 
-						echo get_the_title();
-						echo '<br>';
-						echo get_the_excerpt();
-						echo '<br>';
-						echo get_the_post_thumbnail();
-						echo '<br>';
-						echo get_the_permalink();
+						get_template_part( 'template-parts/components/card/card', null, [		// here your card template
+							'tag-img' => get_the_post_thumbnail(),
+							'date' => get_the_date(),
+							'title' => get_the_title(),
+							'category' => get_the_category()[0],
+							'comments_number' => get_comments_number(),
+							'link_to_post' => get_the_permalink(),
+						] );
 
-						echo '<br>===================================================================<br>';
-
-						// get_template_part( 'template-parts/components/card_news_strings', null, [		// here your card template
-						// 	'title' => get_the_title(),
-						// 	'text' => get_the_excerpt(),
-						// 	'tag-img' => get_the_post_thumbnail(),
-						// 	'link_read_more_href' => get_the_permalink(),
-						// ] );
-				
 					endwhile;
 				} else {
 					//   get_template_part('partials/notfound');
