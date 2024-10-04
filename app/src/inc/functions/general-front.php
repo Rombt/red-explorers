@@ -318,8 +318,6 @@ function rmbt_trim_excerpt( $length, $text = '' ) {
 
 
 
-//@note
-
 function rmbt_redux_get_url( $id_field, $custom_default_url = '' ) {
 	global $rmbt_theme_options;
 
@@ -381,26 +379,7 @@ function rmbt_phone_number_clear_redux( $phone_number ) {
 	return preg_replace( $pattern, '', $phone_number );
 }
 
-/**
- * for equipment-categories.php only
- */
-function get_arr_names_cat_equip() {
-	global $rmbt_theme;
 
-	$arr_redux_fields = array_filter( $rmbt_theme, function ($var) {
-		if ( str_contains( $var, 'equipCatPage' ) && str_contains( $var, '_article-title' ) ) {
-			return $var;
-		}
-	}, ARRAY_FILTER_USE_KEY );
-
-	$arr_name_cat_equip = [];
-	$pater = '/equipCatPage-(.*)?_article/';
-	foreach ( $arr_redux_fields as $key => $value ) {
-		preg_match( $pater, $key, $name_cat_equip );
-		$arr_name_cat_equip[] = $name_cat_equip[1];
-	}
-	return $arr_name_cat_equip;
-}
 
 function rmbt_redux_field_to_ul( $id_field, $mod = 'tel', $before_str = '', $after_str = '' ) {
 

@@ -1,0 +1,98 @@
+.rmbt-card {
+  width: 377px;
+  height: 637px;
+
+  font-family: lato;
+  color: #000000;
+  text-transform: capitalize;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 10.32px 14.13px 35px 0px rgba(0, 0, 0, 0.12);
+
+  &__img {
+    width: 379px;
+    height: 268px;
+    display: block;
+  }
+
+  &__date {
+    font-size: 18px;
+    font-weight: 600;
+
+    margin-top: 16px;
+    padding-left: 10px;
+    border-left: 3px solid #ffa500;
+  }
+
+  &__body {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px 0px 10px;
+
+    // border: 1px solid #0515fd;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0px 0px 0px 0px;
+
+    width: 100%;
+  }
+
+  &__footer {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 40px;
+
+    padding: 0px 18px 0px 18px;
+
+    display: flex;
+
+    // border: 1px solid #0515fd;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    span {
+      margin-left: 4px;
+    }
+  }
+  &__category {
+    flex-basis: 50%;
+  }
+  &__comment {
+    flex-basis: 50%;
+    text-align: end;
+  }
+}
+
+.first-post {
+  width: 783px;
+  height: 862px;
+
+  .rmbt-card__img {
+    width: 783px;
+    height: 453px;
+  }
+  .rmbt-card__title {
+    font-size: 31px;
+    font-weight: 700;
+    line-height: 47px;
+  }
+  .rmbt-card__text {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0px 0px 0px 0px;
+
+    line-height: 40px;
+  }
+}

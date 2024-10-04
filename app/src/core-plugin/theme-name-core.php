@@ -7,11 +7,10 @@ Version: 1.0
 Author: Rombt
 Author URI: #
 License: Proprietary
-Text Domain: red-explorers //! you must use only chars those allow for url 
+Text Domain: red-explorers 
 */
 
 
-define( 'RMBT_TEXT_DOMAIN_THEME', 'red-explorers' );  //! you must use only chars those allow for url 
 
 if ( ! function_exists( 'add_action' ) ) {
 	echo 'Hi there!  I\'m just a plugin, not much I can do when called directly.';
@@ -31,32 +30,22 @@ require_once plugin_dir_path( __FILE__ ) . 'inc/general-admin.php';
 
 function rmbt_get_images_sizes() {
 
+
+
 	return array(
 		'post' => array(
 			array(
-				'name' => 'rmbt_post-img',
-				'width' => 845,
-				'height' => 400,
+				'name' => 'rmbt-post-img',
+				'width' => 379,
+				'height' => 268,
 				'crop' => true,
 			),
-			array(
-				'name' => 'rmbt_small-img',
-				'width' => 70,
-				'height' => 70,
-				'crop' => true,
-			),
-			array(
-				'name' => 'rmbt_largest-img',
-				'width' => 1970,
-				'height' => 570,
-				'crop' => true,
-			),
-			array(
-				'name' => 'rmbt_header-img',
-				'width' => 1970,
-				'height' => 250,
-				'crop' => true,
-			),
+			// array(
+			// 	'name' => 'rmbt_small-img',
+			// 	'width' => 70,
+			// 	'height' => 70,
+			// 	'crop' => true,
+			// ),
 		),
 	);
 }

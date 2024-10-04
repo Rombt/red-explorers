@@ -10,7 +10,7 @@ function rmbt_generate_content() {
 		return;
 	}
 
-	$image_path = wp_upload_dir()['basedir'] . '/2024/10/coming-soon_0.png';
+	$image_path = wp_upload_dir()['basedir'] . '/2024/10/coming-soon_5.jpg';
 	$attachment = array(
 		'guid' => wp_upload_dir()['url'] . '/' . basename( $image_path ),
 		'post_mime_type' => mime_content_type( $image_path ),
@@ -37,24 +37,24 @@ function rmbt_generate_content() {
 	}
 
 	$countries = [ 
-		"Франция",
-		"Италия",
-		"Испания",
-		"Япония",
-		"Канада",
-		"Бразилия",
-		"Австралия",
-		"Германия",
-		"Индия",
-		"Южная Африка",
-		"Мексика",
-		"Аргентина",
-		"Китай",
-		"Великобритания",
-		"Таиланд",
-		"Уругвай",
-		"Новая Зеландия",
-		"Швейцария",
+		"France",
+		"Italy",
+		"Spain",
+		"Japan",
+		"Canada",
+		"Brazil",
+		"Australia",
+		"Germany",
+		"India",
+		"South Africa",
+		"Mexico",
+		"Argentina",
+		"China",
+		"United Kingdom",
+		"Thailand",
+		"Uruguay",
+		"New Zealand",
+		"Switzerland",
 	];
 
 	function getRandomImage( $country ) {
@@ -68,7 +68,7 @@ function rmbt_generate_content() {
 		$country = $countries[ $random_index ];
 
 		$date = generateRandomDate( "2022-01-01", "2024-12-31" );
-		$title = "Путешествие по " . $country;
+		$title = "Traveling around " . $country;
 		$text = generateRandomText();
 		$image = getRandomImage( $country );
 

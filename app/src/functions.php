@@ -70,6 +70,15 @@ function rmbt_site_setup() {
 
 	load_theme_textdomain( RMBT_TEXT_DOMAIN_THEME, get_template_directory() . '/languages' );
 	add_theme_support( 'automatic-feed-links' );
+
+
+	/* изменение значений размеров картинок которые заданы в WP по дефолту (thumb, thumbnail post-thumbnail) первые два одно и тоже*/
+	// update_option( 'post-thumbnail_size_w', 379 );
+	// update_option( 'post-thumbnail_size_h', 268 );
+	// update_option( 'post-thumbnail_crop', 1 );
+
+
+
 }
 add_action( 'after_setup_theme', 'rmbt_site_setup' );
 

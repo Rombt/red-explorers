@@ -12,7 +12,7 @@ jQuery(document).ready(function ($) {
         request: 'regenerate-content',
       },
       success: function (response) {
-        console.log(response);
+        // console.log(response);
       },
       error: function (xhr, status, error) {
         // console.log('Ошибка при обновлении значения поля:', error);

@@ -28,10 +28,10 @@
          <header class="rmbt-container rmbt-header-red-explorers">
 
             <?php get_template_part( 'template-parts\components\button-generate_content\button-generate_content', null, [ 
-               'href' => '#',
-               'class' => '',
-               'text' => 'regenerate content',
-            ] ); ?>
+					'href' => '#',
+					'class' => '',
+					'text' => 'regenerate content',
+				] ); ?>
 
             <div class="rmbt-header-red-explorers__row rmbt-header-red-explorers-top-row">
 

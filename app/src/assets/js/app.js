@@ -5,7 +5,7 @@ import './modules/spoiler.js';
 import './modules/tabs.js';
 import './modules/arrowsInputNumberStyle.js';
 import './modules/HorizontalMenu.js';
-// import './modules/sliders.js';
+import './sliders.js';
 
 const scrollDownIcon = document.querySelector('.scroll-down__icon');
 if (scrollDownIcon) {
