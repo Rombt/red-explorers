@@ -59,6 +59,7 @@
 
 
 <?php get_template_part( 'template-parts/parts/slider_section/slider_section' ); ?>
+<?php get_template_part( 'template-parts/parts/subscribe/subscribe' ); ?>
 
 
 

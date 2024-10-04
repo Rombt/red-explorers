@@ -1,0 +1,115 @@
+.rmbt-subscribe-full-width {
+}
+.rmbt-subscribe {
+  font-family: lato;
+  font-weight: 400;
+  color: #000000;
+
+  &__row {
+    .row-flex();
+    position: relative;
+
+    .to(1280px,{
+      justify-content: center;
+      });
+
+    .to(480px,{
+      padding-left: 20px;
+      padding-right: 20px;
+      });
+  }
+
+  &__text {
+    width: 474px;
+    padding-left: 100px;
+    text-align: left;
+
+    font-size: 30px;
+    .adaptive-prop(font-size, 30, 20);
+
+    .to(1280px,{
+    padding-left: 0px;
+    text-align: center;
+    line-height: 40px;
+    });
+
+    span {
+      color: #0336ff;
+    }
+  }
+  &__form {
+    max-width: 680px;
+    margin-left: 50px;
+    font-size: 20px;
+
+    .to(1280px,{
+    margin-left: 0px;
+    });
+
+    p {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      .to(1280px,{
+      flex-wrap: wrap;
+      justify-content: center;
+
+      row-gap: 20px;
+      });
+
+      .to(590px,{
+      flex-direction: column;
+      align-items: center;
+      });
+
+      .wpcf7-spinner {
+        display: block;
+        height: 30px;
+        width: 30px;
+        align-self: center;
+      }
+
+      .wpcf7-not-valid-tip {
+        text-align: center;
+      }
+    }
+    .wpcf7-response-output {
+      position: absolute;
+      right: 0px;
+      bottom: -55px;
+      width: max-content;
+      max-width: 80%;
+      height: auto;
+
+      .adaptive-prop(font-size, 20, 16);
+    }
+
+    input[type='email'] {
+      box-sizing: border-box;
+      padding-left: 23px;
+      width: 330px;
+      height: 78px;
+      border-radius: 8px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: #c4c4c4;
+
+      .to(480px,{
+      max-width: 280px !important;
+      });
+    }
+
+    input[type='submit'] {
+      box-sizing: border-box;
+      margin-left: 23px;
+      width: 200px;
+      height: 78px;
+      border-radius: 8px;
+      background-color: #0336ff;
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+  }
+}
