@@ -11,6 +11,7 @@
 
 
 
+<?php get_template_part( 'template-parts/parts/want_to_go/want_to_go' ); ?>
 <?php get_template_part( 'template-parts/parts/slider_section/slider_section' ); ?>
 <?php get_template_part( 'template-parts/parts/subscribe/subscribe' ); ?>
 
