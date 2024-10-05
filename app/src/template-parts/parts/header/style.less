@@ -121,10 +121,20 @@
   }
 }
 .rmbt-header-red-explorers-title-row {
-  min-height: 487px;
-  max-height: 550px;
+  height: 322px;
+  max-height: 480px;
 
   padding-bottom: 10px;
+
+  &_blog {
+    min-height: 487px;
+    max-height: 550px;
+    padding-bottom: 10px;
+
+    .rmbt-header-red-explorers-col {
+      margin-top: 0px;
+    }
+  }
 }
 .rmbt-header-red-explorers-col {
   .col();
@@ -139,6 +149,8 @@
   justify-content: space-between;
   row-gap: 30px;
   padding-top: 15px;
+
+  margin-top: -100px;
 
   .to(768px,{
   .size(8);

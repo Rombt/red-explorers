@@ -13,6 +13,77 @@ Redux::set_section(
 		'subsections' => true,
 		// 'icon'             => 'el el-home',
 		'fields' => array(
+
+
+			//Header blog section start -----------------------------------
+			array(
+				'id' => 'rmbt-header-blog-section-start',
+				'type' => 'section',
+				'title' => esc_html__( 'Header blog  settings', RMBT_TEXT_DOMAIN_THEME ),
+				'indent' => true,
+			),
+
+
+			array(
+				'id' => 'rmbt-header-blog_img-bg',
+				'type' => 'media',
+				'url' => true,
+				'title' => esc_html__( 'Header-blog background image', 'red-explorers' ),
+				'compiler' => 'true',
+				'preview_size' => 'full',
+			),
+			array(
+				'id' => 'rmbt-header-blog_img-bg_alt',
+				'type' => 'text',
+				'title' => esc_html__( 'header-blog background image alt', RMBT_TEXT_DOMAIN_THEME ),
+			),
+
+			array(
+				'id' => 'rmbt-header-blog_slogan',
+				'type' => 'text',
+				'title' => esc_html__( 'Header-blog Slogan', RMBT_TEXT_DOMAIN_THEME ),
+			),
+			array(
+				'id' => 'rmbt-header-blog_title',
+				'type' => 'text',
+				'title' => esc_html__( 'Header-blog Title', RMBT_TEXT_DOMAIN_THEME ),
+			),
+			array(
+				'id' => 'rmbt-header-blog_button_title',
+				'type' => 'text',
+				'title' => esc_html__( 'Text of the button', RMBT_TEXT_DOMAIN_THEME ),
+			),
+			array(
+				'id' => 'rmbt-header-blog_button_href',
+				'type' => 'text',
+				'title' => esc_html__( 'Link For The Button', RMBT_TEXT_DOMAIN_THEME ),
+				'default' => '#',
+			),
+			array(
+				'id' => 'rmbt-header-blog_scroll-down',
+				'type' => 'text',
+				'title' => esc_html__( 'Scroll Down', RMBT_TEXT_DOMAIN_THEME ),
+			),
+
+
+
+			array(
+				'id' => 'rmbt-header-blog-section-end',
+				'type' => 'section',
+				'indent' => false,
+			),
+			//Header blog section end	-----------------------------------
+
+
+			//Header blog section start -----------------------------------
+			array(
+				'id' => 'rmbt-header-section-start',
+				'type' => 'section',
+				'title' => esc_html__( 'Header settings', RMBT_TEXT_DOMAIN_THEME ),
+				'indent' => true,
+			),
+
+
 			array(
 				'id' => 'rmbt-header_img-bg',
 				'type' => 'media',
@@ -26,38 +97,26 @@ Redux::set_section(
 				'type' => 'text',
 				'title' => esc_html__( 'header background image alt', RMBT_TEXT_DOMAIN_THEME ),
 			),
-
-			array(
-				'id' => 'rmbt-header_slogan',
-				'type' => 'text',
-				'title' => esc_html__( 'Header Slogan', RMBT_TEXT_DOMAIN_THEME ),
-			),
 			array(
 				'id' => 'rmbt-header_title',
 				'type' => 'text',
-				'title' => esc_html__( 'Header Title', RMBT_TEXT_DOMAIN_THEME ),
+				'title' => esc_html__( 'Headerg Title', RMBT_TEXT_DOMAIN_THEME ),
 			),
+
+
+
+
+
+
+
+
+
 			array(
-				'id' => 'rmbt-header_button_title',
-				'type' => 'text',
-				'title' => esc_html__( 'Text of the button', RMBT_TEXT_DOMAIN_THEME ),
+				'id' => 'rmbt-header-section-end',
+				'type' => 'section',
+				'indent' => false,
 			),
-			array(
-				'id' => 'rmbt-header_button_href',
-				'type' => 'text',
-				'title' => esc_html__( 'Link For The Button', RMBT_TEXT_DOMAIN_THEME ),
-				'default' => '#',
-			),
-			array(
-				'id' => 'rmbt-header_scroll-down',
-				'type' => 'text',
-				'title' => esc_html__( 'Scroll Down', RMBT_TEXT_DOMAIN_THEME ),
-			),
-
-
-
-
-
+			//Header blog section end	-----------------------------------
 
 
 			/**************************************************************************************/
