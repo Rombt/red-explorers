@@ -17,7 +17,6 @@ if (scrollDownIcon) {
     document.body.clientHeight,
     document.documentElement.clientHeight
   );
-
   document.querySelector('.scroll-down__icon').addEventListener('click', e => {
     window.scrollBy({
       top: scrollHeight,

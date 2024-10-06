@@ -24,6 +24,11 @@ function rmbt_theme_scripts_admin() {
 add_action( 'admin_enqueue_scripts', 'rmbt_theme_scripts_admin' );
 
 require_once plugin_dir_path( __FILE__ ) . 'inc/general-admin.php';
+require_once plugin_dir_path( __FILE__ ) . 'inc/locations/locations.php';
+require_once plugin_dir_path( __FILE__ ) . 'inc/locations/field_to_admin.php';
+require_once plugin_dir_path( __FILE__ ) . 'inc/locations/ajax.php';
+
+
 // require_once plugin_dir_path(__FILE__) . 'inc/ajax.php';
 // require_once plugin_dir_path(__FILE__) . 'inc/gutenberg/index.php';
 // require_once plugin_dir_path(__FILE__) . 'inc/acf.php';
