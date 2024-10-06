@@ -3,25 +3,25 @@
 
 
 <div class="rmbt-full-width">
-   <div class="rmbt-container">
-      <div class="rmbt-row">
-         <?php get_sidebar() ?>
+	<div class="rmbt-container">
+		<div class="rmbt-row">
+			<?php get_sidebar() ?>
 
-         <main class="rmbt-main">
+			<main class="rmbt-main">
 
 
-            <?php
+				<?php
 				$i_post = 0;
 				if ( have_posts() ) {
 					while ( have_posts() ) :
 						the_post();
 
 						if ( $i_post === 0 ) {
-							$class = 'first-post';
+							$class = 'first-post rmbt-shadow';
 							$text = get_the_excerpt();
 							$i_post++;
 						} else {
-							$class = '';
+							$class = 'rmbt-shadow';
 							$text = '';
 						}
 
@@ -50,9 +50,9 @@
 				?>
 
 
-         </main>
-      </div>
-   </div>
+			</main>
+		</div>
+	</div>
 </div>
 
 <?php //  get_template_part( 'template-parts/components/pagination' ); ?>
