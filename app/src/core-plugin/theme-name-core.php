@@ -28,6 +28,10 @@ require_once plugin_dir_path( __FILE__ ) . 'inc/locations/locations.php';
 require_once plugin_dir_path( __FILE__ ) . 'inc/locations/field_to_admin.php';
 require_once plugin_dir_path( __FILE__ ) . 'inc/locations/ajax.php';
 
+require_once plugin_dir_path( __FILE__ ) . 'inc/demo_content/demo_content.php';
+require_once plugin_dir_path( __FILE__ ) . 'inc/demo_content/ajax.php';
+
+
 
 // require_once plugin_dir_path(__FILE__) . 'inc/ajax.php';
 // require_once plugin_dir_path(__FILE__) . 'inc/gutenberg/index.php';
