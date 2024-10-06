@@ -15,22 +15,17 @@ if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
 		}
 	}
 }
-
-
-
-
-
 ?>
 
 
 
 <div class="wrapper-section categories-block-wrapper-section">
-	<div class="rmbt-full-width rmbt-categories-block-full-width">
-		<section class="rmbt-container rmbt-categories-block">
-			<div class="rmbt-categories-block__row">
-				<ul class="rmbt-categories-block__col">
+   <div class="rmbt-full-width rmbt-categories-block-full-width">
+      <section class="rmbt-container rmbt-categories-block">
+         <div class="rmbt-categories-block__row">
+            <ul class="rmbt-categories-block__col">
 
-					<?php if ( empty( $filtered_terms ) ) {
+               <?php if ( empty( $filtered_terms ) ) {
 						echo 'Нет отмеченных терминов.';
 					} else {
 						foreach ( $filtered_terms as $term ) {
@@ -38,8 +33,8 @@ if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
 						}
 					} ?>
 
-				</ul>
-			</div>
-		</section>
-	</div>
+            </ul>
+         </div>
+      </section>
+   </div>
 </div>
