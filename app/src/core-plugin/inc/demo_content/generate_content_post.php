@@ -1,14 +1,6 @@
 <?php
 
-
-add_action( 'wp_ajax_generate_content', 'rmbt_generate_content' );
-add_action( 'wp_ajax_nopriv_generate_content', 'rmbt_generate_content' );
-function rmbt_generate_content() {
-	$request = $_POST['request'];
-
-	if ( $request !== 'regenerate-content' ) {
-		return;
-	}
+function generate_content_post() {
 
 	$image_path = wp_upload_dir()['basedir'] . '/2024/10/coming-soon_5.jpg';
 	$attachment = array(
@@ -91,11 +83,11 @@ function rmbt_generate_content() {
 				set_post_thumbnail( $post_id, $attachment_id );
 			}
 
-			echo "Пост '{$title}' добавлен с ID {$post_id}\n";
 		} else {
-			echo "Ошибка добавления поста '{$title}'\n";
+			$error = new WP_Error( '500', 'ERROR of added the post.' );
+			wp_send_json_error( $error );
 		}
 	}
 
-	wp_die();
+	wp_send_json_success();
 }

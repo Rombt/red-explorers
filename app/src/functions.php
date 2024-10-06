@@ -6,7 +6,6 @@ define( 'rmbt_URL_THEME', esc_url( get_template_directory_uri() ) );
 
 require_once get_template_directory() . '/inc/functions/class-tgm-plugin-activation.php';
 require_once get_template_directory() . '/inc/functions/general-front.php';
-require_once get_template_directory() . '/inc/functions/generate_content.php';
 // require_once get_template_directory() . '/inc/functions/comment_default.php';
 
 if ( class_exists( 'ReduxFramework' ) ) {

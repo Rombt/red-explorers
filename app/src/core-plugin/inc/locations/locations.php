@@ -59,7 +59,7 @@ function create_custom_post_type() {
 		'has_archive' => true,
 		'supports' => array( 'title', 'editor', 'thumbnail' ),
 		'rewrite' => array( 'slug' => 'destinations' ),
-		'show_in_rest' => true, // Включает поддержку блоков Gutenberg
+		'show_in_rest' => true,
 	);
 
 	register_post_type( 'destination', $args );
@@ -68,14 +68,38 @@ add_action( 'init', 'create_custom_post_type' );
 
 
 
+/* DEMO content */
 // function add_location_terms() {
-// 	$locations = [ 
-// 'Italy', 'France', 'Spain', 'Japan', 'USA', 'Thailand', 'Vietnam', 'India',
-// 'Morocco', 'Europe', 'Asia', 'America', 'Africa', 'Australia', 'Mediterranean',
-// 'Southeast Asia', 'North America', 'Latin America', 'Eastern Europe',
-// 'Rome', 'Paris', 'Barcelona', 'Tokyo', 'New York', 'Bangkok', 'Ho Chi Minh City', 'Delhi', 'Marrakech',
-
-// 	];
+// $locations = [ 
+// 	'Italy',
+// 	'France',
+// 	'Spain',
+// 	'Japan',
+// 	'USA',
+// 	'Thailand',
+// 	'Vietnam',
+// 	'India',
+// 	'Morocco',
+// 	'Europe',
+// 	'Asia',
+// 	'America',
+// 	'Africa',
+// 	'Australia',
+// 	'Mediterranean',
+// 	'Southeast Asia',
+// 	'North America',
+// 	'Latin America',
+// 	'Eastern Europe',
+// 	'Rome',
+// 	'Paris',
+// 	'Barcelona',
+// 	'Tokyo',
+// 	'New York',
+// 	'Bangkok',
+// 	'Ho Chi Minh City',
+// 	'Delhi',
+// 	'Marrakech',
+// ];
 
 // 	foreach ( $locations as $location ) {
 // 		if ( ! term_exists( $location, 'location' ) ) {
