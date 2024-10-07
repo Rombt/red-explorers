@@ -49,6 +49,7 @@ function generate_content_destination() {
 		$post_data = [ 
 			'post_title' => $title,
 			'post_content' => $text,
+			'comment_status' => 'open',
 			'post_status' => 'publish',
 			'post_type' => 'destination',
 			'post_author' => 1,
