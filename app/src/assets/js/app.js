@@ -6,6 +6,7 @@ import './modules/tabs.js';
 import './modules/arrowsInputNumberStyle.js';
 import './modules/HorizontalMenu.js';
 import './sliders.js';
+import './modules/infinite_scroll.js';
 
 const scrollDownIcon = document.querySelector('.scroll-down__icon');
 if (scrollDownIcon) {

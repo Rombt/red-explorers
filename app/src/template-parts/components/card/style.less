@@ -47,18 +47,19 @@
   &__footer {
     font-size: 18px;
     font-weight: 600;
-    line-height: 40px;
-
-    // padding: 0px 18px 0px 18px;
 
     display: flex;
+    align-items: center;
 
     width: 100%;
 
     svg {
+      position: absolute;
+      left: 0;
+      top: 0;
+
       width: 20px;
       height: 20px;
-      margin-right: 10px;
     }
 
     span {
@@ -66,10 +67,14 @@
     }
   }
   &__category {
+    position: relative;
     flex-basis: 50%;
+    padding-left: 30px;
   }
   &__comment {
+    position: relative;
     flex-basis: 50%;
+    padding-left: 30px;
     text-align: end;
   }
 }
@@ -97,5 +102,30 @@
     margin: 0px 0px 0px 0px;
 
     line-height: 40px;
+  }
+}
+
+.rmbt-card-destination {
+  .col();
+
+  .rmbt-card__img {
+    width: 380px;
+    height: 360px;
+  }
+
+  .rmbt-card__date {
+  }
+
+  .rmbt-card__body {
+    width: 295px;
+    background-color: #fff;
+    position: relative;
+    top: -90px;
+    box-shadow: 10.32px 14.13px 35px 0px rgba(0, 0, 0, 0.12);
+  }
+  .rmbt-card__footer {
+    height: 86px;
+    // line-height: 86px;
+    border-top: 1px solid #c4c4c4;
   }
 }

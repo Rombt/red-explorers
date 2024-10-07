@@ -38,12 +38,12 @@ function generate_content_destination() {
 	}
 
 
-	for ( $i = 0; $i < 10; $i++ ) {
+	for ( $i = 0; $i < 21; $i++ ) {
 		$random_index = mt_rand( 0, count( $locations ) - 1 );
 		$place = $locations[ $random_index ];
 
-		$date = generateRandomDate( "2022-01-01", "2024-12-31" );
-		$title = "Traveling around " . $place->name;
+		$date = generateRandomDate( "2022-01-01", "2024-10-07" );
+		$title = "Our destination is  " . $place->name;
 		$text = generateRandomText();
 
 		$post_data = [ 

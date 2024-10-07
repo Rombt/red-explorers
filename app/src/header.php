@@ -19,11 +19,15 @@
 
       <?php if ( is_home() ) {
 			get_template_part( 'template-parts\parts\header\header-blog' );
-		}elseif (is_single()) {
+		} elseif ( is_single() ) {
 			get_template_part( 'template-parts\parts\header\header', null, [ 
 				'title' => get_the_title(),
 			] );
-      }  else {
+		} elseif ( is_tax( 'location' ) ) {
+			get_template_part( 'template-parts\parts\header\header', null, [ 
+				'title' => single_term_title('', false),
+			] );
+		} else {
 			get_template_part( 'template-parts\parts\header\header', null, [ 
 				'title' => rmbt_get_redux_field( 'rmbt-header_title', 1 ),
 			] );

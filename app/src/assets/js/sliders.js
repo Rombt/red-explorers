@@ -1,5 +1,5 @@
 if (document.querySelector('.rmbt-swiper')) {
-  swiperParam = new Swiper('.rmbt-swiper', {
+  let swiperParam = new Swiper('.rmbt-swiper', {
     direction: 'horizontal',
 
     centerInsufficientSlides: true,
