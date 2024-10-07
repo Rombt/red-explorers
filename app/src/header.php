@@ -19,7 +19,12 @@
 
       <?php if ( is_home() ) {
 			get_template_part( 'template-parts\parts\header\header-blog' );
-		} else {
-			get_template_part( 'template-parts\parts\header\header' );
-
+		}elseif (is_single()) {
+			get_template_part( 'template-parts\parts\header\header', null, [ 
+				'title' => get_the_title(),
+			] );
+      }  else {
+			get_template_part( 'template-parts\parts\header\header', null, [ 
+				'title' => rmbt_get_redux_field( 'rmbt-header_title', 1 ),
+			] );
 		} ?>

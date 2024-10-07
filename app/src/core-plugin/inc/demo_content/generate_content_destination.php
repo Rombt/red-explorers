@@ -2,6 +2,9 @@
 
 function generate_content_destination() {
 
+
+
+
 	$locations = get_terms( array(
 		'taxonomy' => 'location',
 		'fields' => 'all',
@@ -34,6 +37,7 @@ function generate_content_destination() {
 		return implode( " ", array_slice( $wordsArray, 0, $wordCount ) ) . ".";
 	}
 
+
 	for ( $i = 0; $i < 10; $i++ ) {
 		$random_index = mt_rand( 0, count( $locations ) - 1 );
 		$place = $locations[ $random_index ];
@@ -53,6 +57,8 @@ function generate_content_destination() {
 				'place' => $place->name,
 			],
 		];
+
+
 
 		$post_id = wp_insert_post( $post_data );
 
