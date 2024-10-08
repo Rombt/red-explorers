@@ -1,6 +1,51 @@
 <?php
 
+$countries = [ 
+	"France",
+	"Italy",
+	"Spain",
+	"Japan",
+	"Canada",
+	"Brazil",
+	"Australia",
+	"Germany",
+	"India",
+	"South Africa",
+	"Mexico",
+	"Argentina",
+	"China",
+	"United Kingdom",
+	"Thailand",
+	"Uruguay",
+	"New Zealand",
+	"Switzerland",
+];
+
+
+
+
+
+
 function generate_content_post() {
+
+	$args = [ 
+		'taxonomy' => 'category',
+		'hide_empty' => 0,
+	];
+
+	$categories = get_categories( $args );
+
+	$countries = [];
+	foreach ( $categories as $category ) {
+		if ( $category->cat_ID !== 1 ) {
+			$countries[] = [ 
+				'name' => $category->name,
+				'id' => $category->term_id,
+			];
+		}
+	}
+
+
 
 	$image_path = wp_upload_dir()['basedir'] . '/2024/10/coming-soon_5.jpg';
 	$attachment = array(
@@ -28,48 +73,25 @@ function generate_content_post() {
 		return implode( " ", array_slice( $wordsArray, 0, $wordCount ) ) . ".";
 	}
 
-	$countries = [ 
-		"France",
-		"Italy",
-		"Spain",
-		"Japan",
-		"Canada",
-		"Brazil",
-		"Australia",
-		"Germany",
-		"India",
-		"South Africa",
-		"Mexico",
-		"Argentina",
-		"China",
-		"United Kingdom",
-		"Thailand",
-		"Uruguay",
-		"New Zealand",
-		"Switzerland",
-	];
-
-	function getRandomImage( $country ) {
-		global $countries;
-		return $countries[ $country ];
-	}
 
 	for ( $i = 0; $i < 10; $i++ ) {
 
 		$random_index = mt_rand( 0, count( $countries ) - 1 );
-		$country = $countries[ $random_index ];
 
-		$date = generateRandomDate( "2022-01-01", "2024-12-31" );
+		$country = $countries[ $random_index ]['name'];
+		$category_id = $countries[ $random_index ]['id'];
+		$date = generateRandomDate( "2022-01-01", "2024-10-07" );
 		$title = "Traveling around " . $country;
 		$text = generateRandomText();
-		$image = getRandomImage( $country );
+
+		log_in_file( $country );
 
 		$post_data = [ 
 			'post_title' => $title,
 			'post_content' => $text,
 			'post_status' => 'publish',
 			'post_author' => 1,
-			'post_category' => [ 1 ],
+			'post_category' => array( $category_id ),
 			'post_date' => $date,
 			'meta_input' => [ 
 				'country' => $country,
@@ -91,3 +113,19 @@ function generate_content_post() {
 
 	wp_send_json_success();
 }
+
+
+
+// function create_custom_categories() {
+// 	global $countries;
+
+// 	foreach ( $countries as $category_name ) {
+// 		if ( ! term_exists( $category_name, 'category' ) ) {
+// 			wp_insert_term(
+// 				$category_name,
+// 				'category'
+// 			);
+// 		}
+// 	}
+// }
+// add_action( 'init', 'create_custom_categories' );
