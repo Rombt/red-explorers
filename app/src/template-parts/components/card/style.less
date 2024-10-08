@@ -33,7 +33,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    padding: 0px 10px 0px 10px;
+    padding: 0px 10px 17px 10px;
   }
 
   &__title {
@@ -69,11 +69,12 @@
   &__category {
     position: relative;
     flex-basis: 50%;
+    flex-grow: 1;
     padding-left: 30px;
   }
   &__comment {
     position: relative;
-    flex-basis: 50%;
+    // flex-basis: 50%;
     padding-left: 30px;
     text-align: end;
   }
@@ -108,9 +109,12 @@
 .rmbt-card-destination {
   .col();
 
+  width: 380px;
+  height: 563px;
+
   .rmbt-card__img {
     width: 380px;
-    height: 360px;
+    min-height: 360px;
   }
 
   .rmbt-card__date {
@@ -118,11 +122,17 @@
 
   .rmbt-card__body {
     width: 295px;
+    min-height: 302px;
     background-color: #fff;
     position: relative;
     top: -90px;
+    padding-bottom: 0;
     box-shadow: 10.32px 14.13px 35px 0px rgba(0, 0, 0, 0.12);
   }
+  .rmbt-card__comment {
+    flex-basis: 50%;
+  }
+
   .rmbt-card__footer {
     height: 86px;
     // line-height: 86px;

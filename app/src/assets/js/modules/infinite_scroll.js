@@ -1,6 +1,11 @@
 jQuery(function ($) {
-  let pattern = /\/destination\/?$/;
-  if (!pattern.test(window.location.pathname)) {
+  let pattern_1 = /\/destinations\/?$/;
+  let pattern_2 = /\/destination-page\/?$/;
+
+  if (
+    !pattern_1.test(window.location.pathname) &&
+    !pattern_2.test(window.location.pathname)
+  ) {
     return;
   }
 

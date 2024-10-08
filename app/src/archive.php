@@ -2,30 +2,21 @@
 
 
 
-<div class="rmbt-full-width">
-   <div class="rmbt-container">
-      <div class="rmbt-row">
-         <?php get_sidebar() ?>
-
-         <main class="rmbt-main">
+<?php get_template_part( 'template-parts/parts/want_to_go/want_to_go' ); ?>
+<?php get_template_part( 'template-parts/parts/locations_block/locations_block' ); ?>
 
 
-            <?php
-				$i_post = 0;
-				if ( have_posts() ) {
+<div class="wrapper-section destination-wrapper-section">
+	<div class="rmbt-full-width rmbt-destination-full-width">
+		<section class="rmbt-container rmbt-destination">
+			<div class="rmbt-destination__row">
+				<?php
+				$text = '';
+
+				if ( have_posts() ) :
 					while ( have_posts() ) :
 						the_post();
-
-						$category = trim( get_the_category()[0]->name );
-
-						if ( $i_post === 0 ) {
-							$class = 'first-post rmbt-shadow';
-							$text = get_the_excerpt();
-							$i_post++;
-						} else {
-							$class = 'rmbt-shadow';
-							$text = '';
-						}
+						$category = trim( get_the_terms( $post, 'location' )[0]->name );
 
 						if ( has_post_thumbnail() ) {
 							$image = get_the_post_thumbnail();
@@ -35,7 +26,7 @@
 
 
 						get_template_part( 'template-parts/components/card/card', null, [ 
-							'class' => $class,
+							'class' => 'rmbt-card-destination',
 							'tag-img' => $image,
 							'date' => get_the_date(),
 							'title' => get_the_title(),
@@ -46,23 +37,19 @@
 						] );
 
 					endwhile;
-				} else {
-					//   get_template_part('partials/notfound');
-				}
+					wp_reset_postdata();
+				else :
+					echo '<p>No destinations found.</p>';
+				endif;
 				?>
 
-
-         </main>
-      </div>
-   </div>
+			</div>
+		</section>
+	</div>
 </div>
-
-<?php //  get_template_part( 'template-parts/components/pagination' ); ?>
 
 
 <?php get_template_part( 'template-parts/parts/slider_section/slider_section' ); ?>
 <?php get_template_part( 'template-parts/parts/subscribe/subscribe' ); ?>
-
-
 
 <?php get_footer();

@@ -76,10 +76,17 @@ function rmbt_site_setup() {
 	// update_option( 'post-thumbnail_size_h', 268 );
 	// update_option( 'post-thumbnail_crop', 1 );
 
-
-
 }
 add_action( 'after_setup_theme', 'rmbt_site_setup' );
+
+
+function custom_posts_per_page( $query ) {
+	if ( $query->is_post_type_archive( 'destination' ) ) {
+		$query->set( 'posts_per_page', 9 );
+	}
+}
+add_action( 'pre_get_posts', 'custom_posts_per_page' );
+
 
 function simple_rmbt_theme_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'simple_' . RMBT_TEXT_DOMAIN_THEME . '_content_width', 640 );

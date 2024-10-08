@@ -25,10 +25,18 @@
 			] );
 		} elseif ( is_tax( 'location' ) ) {
 			get_template_part( 'template-parts\parts\header\header', null, [ 
-				'title' => single_term_title('', false),
+				'title' => single_term_title( '', false ),
 			] );
-		} else {
+		} elseif ( is_post_type_archive() ) {
+			get_template_part( 'template-parts\parts\header\header', null, [ 
+				'title' => post_type_archive_title( '', false ),
+				'class' => 'rmbt-archive',
+			] );
+		} elseif ( is_page( 'Destination' ) ) {
 			get_template_part( 'template-parts\parts\header\header', null, [ 
 				'title' => rmbt_get_redux_field( 'rmbt-header_title', 1 ),
 			] );
-		} ?>
+		}
+
+
+		?>
