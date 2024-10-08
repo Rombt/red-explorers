@@ -16,7 +16,7 @@ class Category_widget extends WP_Widget {
 			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
 		}
 
-		$categories = get_categories();
+		$categories = get_categories( array( 'number' => 7 ) );
 
 		if ( ! empty( $categories ) ) {
 			echo '<ul>';

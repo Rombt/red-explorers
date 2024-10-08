@@ -85,12 +85,21 @@
 }
 
 .first-post {
-  width: 783px;
+  .adaptive-prop(width, 783, 300);
   height: 862px;
 
+  .to(768px,{
+    width: 80%;
+  });
+
   .rmbt-card__img {
-    width: 783px;
-    height: 453px;
+    // width: 783px;
+    min-height: 453px;
+    // .adaptive-prop(width, 783, 300);
+    // .adaptive-prop(height, 453, 200);
+
+    width: 100%;
+    height: auto;
   }
   .rmbt-card__title {
     font-size: 31px;

@@ -3,20 +3,22 @@
 
 
 <div class="rmbt-full-width">
-	<div class="rmbt-container">
-		<div class="rmbt-row">
-			<?php get_sidebar() ?>
+   <div class="rmbt-container">
+      <div class="rmbt-row">
+         <?php get_sidebar() ?>
 
-			<main class="rmbt-main">
+         <main class="rmbt-main">
 
 
-				<?php
+            <?php
 				$i_post = 0;
 				if ( have_posts() ) {
 					while ( have_posts() ) :
 						the_post();
 
-						$category = trim( get_the_category()[0]->name );
+						$category = get_the_category();
+						$category_name = trim( $category[0]->name );
+						$category_count = $category[0]->count;
 
 						if ( $i_post === 0 ) {
 							$class = 'first-post rmbt-shadow';
@@ -40,7 +42,8 @@
 							'date' => get_the_date(),
 							'title' => get_the_title(),
 							'text' => $text,
-							'category' => $category,
+							'category' => $category_name,
+							'category-count' => $category_count,
 							'comments_number' => get_comments_number(),
 							'link_to_post' => get_the_permalink(),
 						] );
@@ -52,9 +55,9 @@
 				?>
 
 
-			</main>
-		</div>
-	</div>
+         </main>
+      </div>
+   </div>
 </div>
 
 <?php //  get_template_part( 'template-parts/components/pagination' ); ?>
