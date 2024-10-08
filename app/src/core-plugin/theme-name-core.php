@@ -35,6 +35,8 @@ require_once plugin_dir_path( __FILE__ ) . 'inc/demo_content/generate_content_de
 require_once plugin_dir_path( __FILE__ ) . 'inc/demo_content/generate_content_post.php';
 
 require_once plugin_dir_path( __FILE__ ) . 'inc/infinite_scroll/ajax.php';
+require_once plugin_dir_path( __FILE__ ) . 'inc/widgets/category-widget.php';
+require_once plugin_dir_path( __FILE__ ) . 'inc/widgets/recent_post.php';
 
 
 // require_once plugin_dir_path(__FILE__) . 'inc/ajax.php';

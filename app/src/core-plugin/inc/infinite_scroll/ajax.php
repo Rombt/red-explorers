@@ -17,12 +17,10 @@ function infinite_scroll() {
 
 	$text = '';
 
-	// wp_send_json( $query );
-
 	if ( $query->have_posts() ) {
 		while ( $query->have_posts() ) {
 			$query->the_post();
-			$category = trim( get_the_terms( $post, 'location' )[0]->name, " \t" );
+			$category = trim( get_the_terms( get_post(), 'location' )[0]->name, " \t" );
 
 
 			if ( has_post_thumbnail() ) {
