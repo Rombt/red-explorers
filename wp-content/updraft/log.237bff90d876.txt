@@ -1,0 +1,15 @@
+0000.009 () Opened log file at time: Mon, 07 Oct 2024 05:38:39 +0000 on http://localhost/red-explorers
+0000.010 () UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.24.6 WP: 6.6.2 PHP: 8.1.10 (apache2handler, Windows NT 00-BEREGULENKO 10.0 build 22631 (Windows 11) AMD64) MySQL: 8.0.30 (max packet size=536870912) WPLANG: ru_RU Server: Apache/2.4.54 (Win64) OpenSSL/1.1.1q PHP/8.1.10 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 47.1M | 50M) multisite: N openssl: OpenSSL 1.1.1q  5 Jul 2022 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.010 () Free space on disk containing Updraft's temporary directory: 240689.2 MB
+0000.065 () Restore setup, now closing connection and starting restore over AJAX.
+0000.007 () Opened log file at time: Mon, 07 Oct 2024 05:38:40 +0000 on http://localhost/red-explorers
+0000.007 () UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.24.6 WP: 6.6.2 PHP: 8.1.10 (apache2handler, Windows NT 00-BEREGULENKO 10.0 build 22631 (Windows 11) AMD64) MySQL: 8.0.30 (max packet size=536870912) WPLANG: ru_RU Server: Apache/2.4.54 (Win64) OpenSSL/1.1.1q PHP/8.1.10 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 44.6M | 46M) multisite: N openssl: OpenSSL 1.1.1q  5 Jul 2022 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.007 () Free space on disk containing Updraft's temporary directory: 240689.2 MB
+0000.020 () Ensuring WP_Filesystem is setup for a restore
+0000.021 () WP_Filesystem is setup and ready for a restore
+0000.024 () Restore job started. Entities to restore: uploads, db. Restore options: {"include_unspecified_tables":false,"tables_to_restore":["wp_options","wp_users","wp_usermeta","wp_commentmeta","wp_comments","wp_links","wp_postmeta","wp_posts","wp_term_relationships","wp_term_taxonomy","wp_termmeta","wp_terms"],"tables_to_skip":[],"updraft_encryptionphrase":"","updraft_restorer_wpcore_includewpconfig":false,"updraft_incremental_restore_point":-1}
+0000.026 () PHP event: code E_WARNING: mkdir(): File exists (line 558, D:\web\localhost\red-explorers\wp-admin\includes\class-wp-filesystem-direct.php)
+0000.027 () Error message: Existing unremoved folders from a previous restore exist (please use the "Delete old folders" button to delete them before trying again): D:\web\localhost\red-explorers/wp-content/updraft/uploads-old
+0000.030 () Restore failed...
+0000.030 () Error message: Existing unremoved folders from a previous restore exist (please use the "Delete old folders" button to delete them before trying again): D:\web\localhost\red-explorers/wp-content/updraft/uploads-old
+0000.030 () Restore failed

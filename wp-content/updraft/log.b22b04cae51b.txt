@@ -1,0 +1,104 @@
+0000.009 () Opened log file at time: Tue, 08 Oct 2024 05:44:46 +0000 on http://localhost/red-explorers
+0000.009 () UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.24.6 WP: 6.6.2 PHP: 8.1.10 (apache2handler, Windows NT 00-BEREGULENKO 10.0 build 22631 (Windows 11) AMD64) MySQL: 8.0.30 (max packet size=536870912) WPLANG: ru_RU Server: Apache/2.4.54 (Win64) OpenSSL/1.1.1q PHP/8.1.10 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 49.7M | 52M) multisite: N openssl: OpenSSL 1.1.1q  5 Jul 2022 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.009 () Free space on disk containing Updraft's temporary directory: 240672.5 MB
+0000.025 () Restore setup, now closing connection and starting restore over AJAX.
+0000.003 () Opened log file at time: Tue, 08 Oct 2024 05:44:47 +0000 on http://localhost/red-explorers
+0000.003 () UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.24.6 WP: 6.6.2 PHP: 8.1.10 (apache2handler, Windows NT 00-BEREGULENKO 10.0 build 22631 (Windows 11) AMD64) MySQL: 8.0.30 (max packet size=536870912) WPLANG: ru_RU Server: Apache/2.4.54 (Win64) OpenSSL/1.1.1q PHP/8.1.10 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 47.5M | 50M) multisite: N openssl: OpenSSL 1.1.1q  5 Jul 2022 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.003 () Free space on disk containing Updraft's temporary directory: 240672.5 MB
+0000.014 () Ensuring WP_Filesystem is setup for a restore
+0000.015 () WP_Filesystem is setup and ready for a restore
+0000.032 () Restore job started. Entities to restore: plugins, uploads, db. Restore options: {"include_unspecified_tables":false,"tables_to_restore":["wp_options","wp_users","wp_usermeta","wp_commentmeta","wp_comments","wp_links","wp_postmeta","wp_posts","wp_term_relationships","wp_term_taxonomy","wp_termmeta","wp_terms"],"tables_to_skip":[],"updraft_encryptionphrase":"","updraft_restorer_wpcore_includewpconfig":false,"updraft_incremental_restore_point":-1}
+0000.034 () PHP event: code E_WARNING: mkdir(): File exists (line 558, D:\web\localhost\red-explorers\wp-admin\includes\class-wp-filesystem-direct.php)
+0000.039 () Entity: db
+0000.039 () restore_backup(backup_file=backup_2024-10-07-2051_redexplorers_4981ad4bcf50-db.gz, type=db, info=a:0:{}, last_one=)
+0000.039 () Распаковка резервной копии (backup_2024-10-07-2051_redexplorers_4981ad4bcf50-db.gz, 0 Mb)
+0000.039 () PHP event: code E_WARNING: mkdir(): File exists (line 558, D:\web\localhost\red-explorers\wp-admin\includes\class-wp-filesystem-direct.php)
+0000.040 () Database successfully unpacked
+0000.040 () Восстановление базы данных (на больших сайтах это может занять много времени и привести к таймауту (если Ваш сервер сконфигурирован с ограничением ресурсов) - в этом случае придется воспользоватся альтернативным методом, например, прямым импортом файла резервной копии в phpMyAdmin)...
+0000.045 () Using direct MySQL access; value of use_mysqli is: 1
+0000.045 () SQL compatibility mode is: NO_AUTO_VALUE_ON_ZERO,NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION
+0000.074 () Max packet size: 512 MB
+0000.075 () Entering maintenance mode
+0000.075 () Включение режима обслуживания&#8230;
+0000.087 () Backup created by: 1.24.6
+0000.087 () Backup of: http://localhost/red-explorers
+0000.088 () Content URL: http://localhost/red-explorers/wp-content
+0000.088 () Uploads URL: http://localhost/red-explorers/wp-content/uploads
+0000.088 () Old table prefix: wp_
+0000.088 () UpdraftPlus plugin slug: updraftplus/updraftplus.php
+0000.088 () Site information: multisite=0
+0000.088 () Site information: sql_mode=NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION
+0000.089 () Skipped execution of SQL statement (unwanted or internally handled type=18): /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+0000.089 () New table prefix: h7_
+0000.092 () Processing table (InnoDB): wp_options - will restore as: h7_options
+0000.127 () Atomic restore: dropping original table (wp_options)
+0000.131 () Atomic restore: renaming new table (h7_options) to final table name (wp_options)
+0000.135 () Restoring prior UD configuration (table: wp_options; keys: 4)
+0000.150 () Processing table (InnoDB): wp_users - will restore as: h7_users
+0000.177 () Atomic restore: dropping original table (wp_users)
+0000.180 () Atomic restore: renaming new table (h7_users) to final table name (wp_users)
+0000.185 () Processing table (InnoDB): wp_usermeta - will restore as: h7_usermeta
+0000.209 () Atomic restore: dropping original table (wp_usermeta)
+0000.212 () Atomic restore: renaming new table (h7_usermeta) to final table name (wp_usermeta)
+0000.216 () Processing table (InnoDB): wp_commentmeta - will restore as: h7_commentmeta
+0000.237 () Atomic restore: dropping original table (wp_commentmeta)
+0000.242 () Atomic restore: renaming new table (h7_commentmeta) to final table name (wp_commentmeta)
+0000.246 () Processing table (InnoDB): wp_comments - will restore as: h7_comments
+0000.272 () Atomic restore: dropping original table (wp_comments)
+0000.276 () Atomic restore: renaming new table (h7_comments) to final table name (wp_comments)
+0000.282 () Processing table (InnoDB): wp_links - will restore as: h7_links
+0000.303 () Atomic restore: dropping original table (wp_links)
+0000.307 () Atomic restore: renaming new table (h7_links) to final table name (wp_links)
+0000.312 () Processing table (InnoDB): wp_postmeta - will restore as: h7_postmeta
+0000.341 () Atomic restore: dropping original table (wp_postmeta)
+0000.344 () Atomic restore: renaming new table (h7_postmeta) to final table name (wp_postmeta)
+0000.349 () Processing table (InnoDB): wp_posts - will restore as: h7_posts
+0000.383 () Atomic restore: dropping original table (wp_posts)
+0000.389 () Atomic restore: renaming new table (h7_posts) to final table name (wp_posts)
+0000.395 () Processing table (InnoDB): wp_term_relationships - will restore as: h7_term_relationships
+0000.418 () Atomic restore: dropping original table (wp_term_relationships)
+0000.422 () Atomic restore: renaming new table (h7_term_relationships) to final table name (wp_term_relationships)
+0000.427 () Processing table (InnoDB): wp_term_taxonomy - will restore as: h7_term_taxonomy
+0000.450 () Atomic restore: dropping original table (wp_term_taxonomy)
+0000.454 () Atomic restore: renaming new table (h7_term_taxonomy) to final table name (wp_term_taxonomy)
+0000.459 () Processing table (InnoDB): wp_termmeta - will restore as: h7_termmeta
+0000.482 () Atomic restore: dropping original table (wp_termmeta)
+0000.485 () Atomic restore: renaming new table (h7_termmeta) to final table name (wp_termmeta)
+0000.490 () Processing table (InnoDB): wp_terms - will restore as: h7_terms
+0000.506 () Skipped execution of SQL statement (unwanted or internally handled type=18): /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+0000.515 () UpdraftVault: this site has not been connected - check your settings
+0001.914 () Unlocking database and leaving maintenance mode
+0001.914 () Отключение режима обслуживания&#8230;
+0001.915 () Atomic restore: dropping original table (wp_terms)
+0001.918 () Atomic restore: renaming new table (h7_terms) to final table name (wp_terms)
+0001.923 () Finished: lines processed: 43 in 1.87 seconds
+0001.923 () Очистка мусора...
+0001.924 () Begin search and replace (updraftplus_restored_db)
+0001.924 () [Database-replace-site-url] Database: search and replace site URL
+0001.924 () This option was not selected.
+0001.929 () Entity: plugins
+0001.929 () restore_backup(backup_file=backup_2024-10-07-2051_redexplorers_4981ad4bcf50-plugins.zip, type=plugins, info=a:3:{s:4:"path";s:49:"D:\web\localhost\red-explorers/wp-content/plugins";s:11:"description";s:14:"Плагины";s:20:"singular_description";s:12:"Плагин";}, last_one=)
+0001.929 () Распаковка резервной копии (backup_2024-10-07-2051_redexplorers_4981ad4bcf50-plugins.zip, 10.4 MB)
+0001.943 () Unzipping backup_2024-10-07-2051_redexplorers_4981ad4bcf50-plugins.zip to D:/web/localhost/red-explorers/wp-content/upgrade/92dc5da0/ using UpdraftPlus_ZipArchive, starting index 0
+0002.373 () Unzip progress: 1002 out of 2805 files (6.9 MB, plugins/redux-framework/redux-core/inc/extensions/import_export/import_export/redux-import-export.css)
+0003.604 () Unzip progress: 2003 out of 2805 files (28.4 MB, plugins/updraftplus/methods/s3generic.php)
+0005.345 () Unzip progress: 2805 out of 2805 files (34.2 MB, plugins/updraftplus/vendor/team-updraft/common-libs/src/updraft-tasks/class-updraft-tasks-activation.php)
+0005.351 () Moving old data: filesystem method / updraft_dir is potentially possible
+0005.352 () Moving old data: can potentially use wp_filesystem method / -old
+0005.352 () Удаление устаревших данных...
+0006.136 () Top-level entities being moved: contact-form-7, index.php, red-explorers-core, redux-framework, regenerate-thumbnails, updraftplus
+0006.147 () Перемещение распакованной резервной копии на место...
+0006.397 () Top-level entities being moved: contact-form-7, index.php, red-explorers-core, redux-framework, updraftplus
+0006.403 () Очистка мусора...
+0006.407 () Entity: uploads
+0006.407 () restore_backup(backup_file=backup_2024-10-07-2051_redexplorers_4981ad4bcf50-uploads.zip, type=uploads, info=a:2:{s:4:"path";s:49:"D:\web\localhost\red-explorers/wp-content/uploads";s:11:"description";s:16:"Загрузки";}, last_one=1)
+0006.407 () Распаковка резервной копии (backup_2024-10-07-2051_redexplorers_4981ad4bcf50-uploads.zip, 1.6 MB)
+0006.408 () Unzipping backup_2024-10-07-2051_redexplorers_4981ad4bcf50-uploads.zip to D:/web/localhost/red-explorers/wp-content/upgrade/a03a4f36/ using UpdraftPlus_ZipArchive, starting index 0
+0006.426 () Unzip progress: 39 out of 39 files (1.6 MB, uploads/wpcf7_uploads/.htaccess)
+0006.430 () Moving old data: filesystem method / updraft_dir is potentially possible
+0006.430 () Moving old data: can potentially use wp_filesystem method / -old
+0006.430 () Удаление устаревших данных...
+0006.435 () Перемещение распакованной резервной копии на место...
+0006.440 () Очистка мусора...
+0006.453 () Restore successful!
+0006.453 () Restore successful
