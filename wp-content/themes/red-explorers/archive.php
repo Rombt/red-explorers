@@ -1,12 +1,3 @@
-<?php
-/* Template Name: destination  page */
-
-/*
-	эту страницу я сделал исключительно в демонстрационных целях. Просто пример касомного цикла
-*/
-?>
-
-
 <?php get_header(); ?>
 
 
@@ -20,20 +11,11 @@
 		<section class="rmbt-container rmbt-destination">
 			<div class="rmbt-destination__row">
 				<?php
-				$args = array(
-					'post_type' => 'destination',
-					'posts_per_page' => 9,
-
-					'orderby' => array(
-						'title' => 'ASC',
-					),
-				);
-				$destination_query = new WP_Query( $args );
 				$text = '';
 
-				if ( $destination_query->have_posts() ) :
-					while ( $destination_query->have_posts() ) :
-						$destination_query->the_post();
+				if ( have_posts() ) :
+					while ( have_posts() ) :
+						the_post();
 						$category = trim( get_the_terms( $post, 'location' )[0]->name );
 
 						if ( has_post_thumbnail() ) {
