@@ -1,0 +1,151 @@
+.rmbt-card {
+  width: 377px;
+  height: 637px;
+
+  font-family: lato;
+  color: #000000;
+  text-transform: capitalize;
+
+  display: flex;
+  flex-direction: column;
+
+  // box-shadow: 10.32px 14.13px 35px 0px rgba(0, 0, 0, 0.12);
+  // background-color: rgba(255, 255, 255, 0);
+
+  &__img {
+    width: 379px;
+    height: 268px;
+    display: block;
+  }
+
+  &__date {
+    font-size: 18px;
+    font-weight: 600;
+
+    margin-top: 16px;
+    padding-left: 10px;
+    border-left: 3px solid #ffa500;
+  }
+
+  &__body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 0px 10px 17px 10px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0px 0px 0px 0px;
+
+    width: 100%;
+  }
+
+  &__footer {
+    font-size: 18px;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    svg {
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      width: 20px;
+      height: 20px;
+    }
+
+    span {
+      margin-left: 4px;
+    }
+  }
+  &__category {
+    position: relative;
+    flex-basis: 50%;
+    flex-grow: 1;
+    padding-left: 30px;
+  }
+  &__comment {
+    position: relative;
+    // flex-basis: 50%;
+    padding-left: 30px;
+    text-align: end;
+  }
+}
+
+.rmbt-shadow {
+  box-shadow: 10.32px 14.13px 35px 0px rgba(0, 0, 0, 0.12);
+}
+
+.first-post {
+  .adaptive-prop(width, 783, 300);
+  height: 862px;
+
+  .to(768px,{
+    width: 80%;
+  });
+
+  .rmbt-card__img {
+    // width: 783px;
+    min-height: 453px;
+    // .adaptive-prop(width, 783, 300);
+    // .adaptive-prop(height, 453, 200);
+
+    width: 100%;
+    height: auto;
+  }
+  .rmbt-card__title {
+    font-size: 31px;
+    font-weight: 700;
+    line-height: 47px;
+  }
+  .rmbt-card__text {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0px 0px 0px 0px;
+
+    line-height: 40px;
+  }
+}
+
+.rmbt-card-destination {
+  .col();
+
+  width: 380px;
+  height: 563px;
+
+  .rmbt-card__img {
+    width: 380px;
+    min-height: 360px;
+  }
+
+  .rmbt-card__date {
+  }
+
+  .rmbt-card__body {
+    width: 295px;
+    min-height: 302px;
+    background-color: #fff;
+    position: relative;
+    top: -90px;
+    padding-top: 40px;
+    padding-bottom: 0;
+    box-shadow: 10.32px 14.13px 35px 0px rgba(0, 0, 0, 0.12);
+  }
+  .rmbt-card__comment {
+    flex-basis: 50%;
+  }
+
+  .rmbt-card__footer {
+    height: 86px;
+    // line-height: 86px;
+    border-top: 1px solid #c4c4c4;
+  }
+}

@@ -1,0 +1,30 @@
+.rmbt-full-width {
+}
+.rmbt-container {
+}
+.rmbt-row {
+  .row-flex();
+  flex-wrap: nowrap;
+}
+
+.rmbt-main {
+  .col();
+  .size(5);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  min-height: 50vh;
+
+  margin-left: 45px;
+
+  .to(1280px,{
+  justify-content: center;
+});
+
+  .to(768px,{
+  .size(8);
+  margin-left: 0px;
+  });
+}
